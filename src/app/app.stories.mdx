@@ -1,0 +1,21 @@
+import { moduleMetadata, addDecorator } from '@storybook/angular';
+import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { AppComponent } from './app.component'
+
+<Meta title="Multiline template" decorators={[moduleMetadata({
+  declarations: [AppComponent],
+})]} />
+
+# Multiline template
+
+<Preview>
+  <Story name="Overview">
+    {{
+      template: `
+        <app-root></app-root>
+
+        <app-root></app-root>
+      `
+    }}
+  </Story>
+</Preview>
